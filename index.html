@@ -384,7 +384,7 @@
 
                 function Socket_Create() {
                     socket = null;
-                    socket = new WebSocket('wss://ws1.estrategiastarget.com:8085');
+                    socket = new WebSocket('wss://ws2.estrategiastarget.com:8085');
                     socket.addEventListener('open', function (event) {
                         clearInterval(socketInterval);
                         Sheet_Update(0);

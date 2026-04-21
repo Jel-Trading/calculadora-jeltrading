@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
-
-<link rel="icon" type="image/png" href="JEL-Trading.ico" sizes="48x48">
-
     <head>
         <meta charset="UTF-8">
-        <title>Gesti&oacute;n de Riesgo JEL Trading</title>
-        
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		
+                <title>Gesti&oacute;n de Riesgo JEL Trading</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
 <meta charset="utf-8">
 
 <meta name="description" content="Ayudamos a personas sin experiencia a cambiar sus vidas, logrando resultados en el Mercado Financiero">
@@ -20,10 +17,11 @@
 <meta name="keywords" content="https://jel-trading.github.io/calculadora-jeltrading/"/>
 
 <link rel="canonical" href="https://jel-trading.github.io/calculadora-jeltrading/"/>
-        
-                
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
         <style>
             @font-face {
                 font-family: Quicksand;
@@ -47,7 +45,7 @@
                 font-family: PoppinsBlack;
                 src: url('../assets/fonts/Poppins-Black.ttf');
             }
-            
+
             * {
                 margin: 0;
                 padding: 0;
@@ -55,18 +53,18 @@
                 box-sizing: border-box;
                 border-spacing: 0;
             }
-            
+
             input::-webkit-outer-spin-button,
             input::-webkit-inner-spin-button {
                 -webkit-appearance: none;
             }
-            
+
             html, body {
                 height: 100%;
-                width: 100%;         
-                background: linear-gradient(to bottom, rgb(22,22,22), rgb(0,0,0), rgb(0,0,0));   
+                width: 100%;
+                background: linear-gradient(to bottom, rgb(22,22,22), rgb(0,0,0), rgb(0,0,0));
             }
-            
+
             #logo {
                 z-index: 10;
                 position: fixed;
@@ -134,10 +132,9 @@
         </style>
     </head>
     <body>
-        
-        
-        
-        <div id="header">ESTRATEGIAS JEL TRADING</div>
+
+
+ <div id="header">ESTRATEGIAS JEL TRADING</div>
         <div id="content">
                     <div id="tablesDiv" style="width: 100%;">
                 <span id="loginMenu"><span id="userEmail"></span> <span id="logoutButton"></span></span>
@@ -146,13 +143,16 @@
 
                 <div class="tableContainer" style="position: relative;">
                     <table id="cicleTable">
+       
+
                         <tbody>
                             <tr>
                                 <td>Balance Inicial</td>
                                 <td>Total Operaciones</td>
                                 <td>Aciertos ITM</td>
                                 <td>Pago del Broker</td>
-                            </tr>
+
+                          </tr>
                             <tr>
                                 <td><input id="inputBalance" type="text" placeholder="$ 0,00" value="50.0" /></td>
                                 <td><input id="inputTotalTrades" type="text" placeholder="7" value="7" /></td>
@@ -164,12 +164,11 @@
                                 <td id="cicleStatus">Errores Permitidos:<br/>0/0 Errores"</td>
                                 <td id="cicleStatus2">Aciertos: 0.00%<br/>0/0 Aciertos</td>
                                 <td><input onclick="Sheet_Update(1, true)" id="inputWins" type="button" placeholder="2" value="LIMPIAR" style="background-color: #b61a1a; border-bottom: 3px solid #7b1010; padding: 16px 0px;!important; width: 100%;" /></td>
-                                
-                                
-                                
-                                
+                         
                             </tr>
-                        </tbody>
+
+
+    </tbody>
                     </table>
                 </div>
                 <div class="tableContainer" style="height: 250px; overflow-y: scroll;">
@@ -193,24 +192,25 @@
                     </table>
                 </div>
             </div>
-            
-            
-            
+
+
+
+
+
             <div id="bannersDiv">
-                
-                
-                
-               
-               
-              
-              
-                
-            <div id="loadingDiv"><img height="200px" width="200px" src="loading.svg" alt="Carregando..."></div>
+                <img id="firstBanner" class="active" src="assets/images/tools/banners/1.0.webp" alt="Banner 01" onclick="Util_NewTab('https://t.me/Chat_JEL_Trading')" />
+                <img src="assets/images/tools/banners/2.0.webp" alt="Banner 02" onclick="Util_NewTab('https://t.me/JelTradingFree')" />
+                <img src="assets/images/tools/banners/3.0.webp" alt="Banner 03" onclick="Util_NewTab('https://t.me/JelTrading')" />
+                <img src="assets/images/tools/banners/4.0.webp" alt="Banner 04" onclick="Util_NewTab('https://t.me/JelTrading')" />
+                <img src="assets/images/tools/banners/5.0.webp" alt="Banner 05" onclick="Util_NewTab('https://broker-qx.pro/sign-up/?lid=1662109')" />
+                <div class="buttonDiv" style="left: 0;" onclick="Util_ImageUpdate('1')"><</div>
+                <div class="buttonDiv" style="right: 0;" onclick="Util_ImageUpdate('2')">></div>
+            </div>
             
-            
-            
-            
-            
+
+
+
+	<div id="loadingDiv"><img height="200px" width="200px" src="../assets/images/tools/loading.svg" alt="Carregando..."></div>
             <style>
                 #loginMenu {
                     display: block;
@@ -218,7 +218,7 @@
                     text-align: left;
                     width: 400px;
                     max-width: 90%;
-                    margin: 0 auto; 
+                    margin: 0 auto;
                     padding: 10px 0px;
                 }
 
@@ -270,7 +270,7 @@
                     padding: 10px 0px;
                 }
 
-                
+
                 #dataTable tr:first-child td:first-child {
                     border-top-left-radius: 5px;
                 }
@@ -294,7 +294,7 @@
                     border-radius: 3px;
                     background-color: #14B99C;
                 }
-                
+
 
                 tr.paddingTop > td {
                     padding-top: 10px;
@@ -358,14 +358,17 @@
                     z-index: 11;
                     left: 50%;
                 }
-                #bannersDiv > img.inactive {
+                #bannersDiv > img.inactive-left {
                     left: -50%;
+                }
+                #bannersDiv > img.inactive-right {
+                    left: 150%;
                 }
             </style>
             <script>
-                const userID = '2091',
-                    userSSID = '0RS1jaDv3FtIoDVHxQSY91ocbTcq8nnlkdseYg79iZgvijnrJB8ykkCCPTPMAjMY';
-                
+                const userID = '8272',
+                    userSSID = 'wMx0aakMYg6wiIBAvwanL1CEVe6bCldZ6VjTyOJ8W3OoAJ4E7JpSxDlRtbWnPbZW';
+
                 var updateRequest = 0, loadingTimeout = 0;
                 var loadingDiv = document.getElementById('loadingDiv');
                 var inputBalance = document.getElementById('inputBalance'),
@@ -398,7 +401,8 @@
                         }, 10000);
                     });
 
-                    socket.addEventListener('message', function (event) {
+
+ socket.addEventListener('message', function (event) {
                         clearInterval(socketInterval);
                         console.log('Tiempo gasto -> '+(Date.now() - timeStart));
                         console.log('Recibido del servidor:\n', event.data);
@@ -529,7 +533,7 @@
                 
 
 
-                // Clear sessionId cookie
+            // Clear sessionId cookie
                 async function User_GetData() {
                     let request = await fetch('../assets/php/tools/user-validation.php', {
                         method: 'POST',
@@ -553,8 +557,9 @@
                     }
                 }
 
-                
-                async function Sheet_Update(mode = 0, updateBoth = false) {
+
+
+  async function Sheet_Update(mode = 0, updateBoth = false) {
                     if(mode == 0) {
                         loadingDiv.style.display = 'block';
                         if(loadingTimeout != 0) clearTimeout(loadingTimeout);
@@ -621,55 +626,79 @@
                     window.location.reload();
                 }
 
-                var bannerLoopInterval = 0, bannerLoopTimeout = 0, bannerLoopTime = 10000;
-                function Util_ImageUpdate(mode = 0) {
-                    if(mode == 0) {
-                        document.getElementById('bannersDiv').style.height = (document.documentElement.clientHeight - 100 - document.getElementById('tablesDiv').offsetHeight)+"px";
-                        let buttonsDiv = document.getElementById('bannersDiv').querySelectorAll('.buttonDiv');
-                        for(let i = 0; i < buttonsDiv.length; i++) {
-                            // buttonsDiv[i].style.height = document.getElementById('firstBanner').offsetHeight+"px";
-                        }
 
+
+                var bannerLoopInterval = 0, bannerLoopTimeout = 0, bannerLoopTime = 10000, bannerChangeTime = 0;
+                function Util_ImageUpdate(mode = 0) {
+                    let time = Date.now();
+                    if(time - bannerChangeTime < 1000) return;
+
+                    if(mode == 0) {
+                        // Ajusta la altura del contenedor del banner.
+                        document.getElementById('bannersDiv').style.height = (document.documentElement.clientHeight - 100 - document.getElementById('tablesDiv').offsetHeight)+"px";
+                        
+                        // Reinicios automáticos a intervalos
                         clearInterval(bannerLoopInterval);
+                        bannerLoopTime = 10000; // Reseta o temporizador para 10 segundos
+                        
                         bannerLoopInterval = setInterval(() => {
                             if(bannerLoopTime <= 0) {
-                                let banners = document.getElementById('bannersDiv').querySelectorAll('img');
-                                let activeBanner = document.getElementById('bannersDiv').querySelector('img.active');
-                                let nextBanner = activeBanner.nextElementSibling;
-                                if(nextBanner.tagName != 'IMG' || !nextBanner) nextBanner = banners[0];
-                                // console.log(nextBanner);
-                                nextBanner.classList.add('active');
-                                activeBanner.classList.add('inactive');
-                                activeBanner.classList.remove('active');
-                                bannerLoopTimeout = setTimeout(() => {
-                                    activeBanner.style.transition = '0s';
-                                    activeBanner.classList.remove('inactive');
-                                    setTimeout(() => {
-                                        //removing transition property
-                                        activeBanner.style.transition = '';
-                                    }, 1000);
-                                }, 2000);
-                                bannerLoopTime = 10000;
+                                // Avanza automáticamente al siguiente banner
+                                Util_ImageUpdate(2); // Usa o modo "próximo"
+                                bannerLoopTime = 10000; // Reinicia o temporizador
                             }
                             bannerLoopTime -= 100;
                         }, 100);
                     } else {
-                        clearTimeout(bannerLoopTimeout);
+                        // Reinicia el temporizador al pulsar un botón
                         bannerLoopTime = 10000;
-                        var bannerList = document.getElementById('bannersDiv').querySelectorAll('img');
-                        if(mode == 1) {
-                            let firstValue = bannerList[0].getAttribute('src');
-                            for(let i = 0; i < bannerList.length - 1; i++) {
-                                bannerList[i].setAttribute('src', bannerList[i + 1].getAttribute('src'));
+                        
+                        var banners = document.getElementById('bannersDiv').querySelectorAll('img');
+                        var activeBanner = document.getElementById('bannersDiv').querySelector('img.active');
+                        
+                        // Determina cuál será el próximo banner
+                        var targetBanner, beforeTargetBanner;
+                        if(mode == 1) { // Botão da esquerda (voltar)
+                            targetBanner = activeBanner.previousElementSibling;
+                            if(targetBanner) beforeTargetBanner = targetBanner.previousElementSibling;
+                            if(!targetBanner || targetBanner.tagName != 'IMG') {
+                                targetBanner = banners[banners.length - 1];
+                                beforeTargetBanner = targetBanner.previousElementSibling;
                             }
-                            bannerList[bannerList.length - 1].setAttribute('src', firstValue);
-                        } else {
-                            let lastValue = bannerList[bannerList.length - 1].getAttribute('src');
-                            for(let i = bannerList.length - 1; i > 0; i--) {
-                                bannerList[i].setAttribute('src', bannerList[i - 1].getAttribute('src'));
+                            if(!beforeTargetBanner || beforeTargetBanner.tagName != 'IMG') {
+                                beforeTargetBanner = banners[banners.length - 1];
                             }
-                            bannerList[0].setAttribute('src', lastValue);
+                        } else { // botón derecho (avanzar)
+                            targetBanner = activeBanner.nextElementSibling;
+                            if(!targetBanner || targetBanner.tagName != 'IMG') {
+                                targetBanner = banners[0];
+                            }
                         }
+                        
+                        // Defina la dirección de la transición
+                        var direction = (mode == 1) ? 'right' : 'left';
+                        
+                        // Remove todas as classes de todos os banners e define opacity 0
+                        for(let i = 0; i < banners.length; i++) {
+                            banners[i].classList.remove('active', 'inactive-left', 'inactive-right');
+                            if(banners[i] !== activeBanner && banners[i] !== targetBanner) {
+                                banners[i].style.opacity = '0';
+                            } else {
+                                banners[i].style.opacity = '1';
+                            }
+                        }
+                        
+                        // Coloca el banner objetivo en el lado correcto antes de la transición
+                        if(mode == 1) { // Se estamos voltando
+                            beforeTargetBanner.classList.add('inactive-left'); // Coloca el banner objetivo a la izquierda
+                            
+                        }
+                        
+                        // Añade las clases correctas
+                        targetBanner.classList.add('active');
+                        activeBanner.classList.add('inactive-' + direction);
+                        activeBanner.style.opacity = 0;
+                        bannerChangeTime = time;
                     }
                 }
 
@@ -702,14 +731,14 @@
                             // checking if input.value is number
                             input.value = input.value.replace(',', '.');
                             if(isNaN(input.value) || input.value.trim() == "") {
-                                alert("Valor inválido: "+input.value+".\n\Ingrese sólo números!");
+                                alert("Valor inválido: "+input.value+".\n\nDigite apenas números!");
                                 input.value = input.getAttribute('oldValue');
                                 return;
                             }
-                            
+
                             if(input.getAttribute('id') == "inputTotalTrades") {
                                 if(input.value > 25 || input.value < 2) {
-                                    alert("Valor inválido: "+input.value+".\n\ número de operaciones debe ser entre 2 y 25!");
+                                    alert("Valor inválido: "+input.value+".\n\nO número de operações deve ser entre 2 e 25!");
                                     input.value = input.getAttribute('oldValue');
                                     return;
                                 }
@@ -724,15 +753,10 @@
                 document.getElementById('logoutButton').addEventListener('click', User_Logout);
                 document.addEventListener('DOMContentLoaded', () => { Sheet_Update(1, true); User_GetData(); Util_ImageUpdate(); });
                 //resize
-                document.addEventListener('resize', () => { Util_ImageUpdate(); });
+                window.addEventListener('resize', () => { Util_ImageUpdate(); });
             </script>
                 </div>
-				
-				
-				
-     <img id="logo" src="JEL-Trading.png"> 		
-		
-		
-		
+
+        <img id="logo" src="JEL-Trading.png">
     </body>
 </html>
